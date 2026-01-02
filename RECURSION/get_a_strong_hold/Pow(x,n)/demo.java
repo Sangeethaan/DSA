@@ -1,39 +1,29 @@
-
-public class demo {
-    public static double bruteForce(double x, int n) {
-        
-        long N = n;
-        boolean isPositive = (N >= 0) ? true : false;
-        double ans = 1;
-        N = Math.abs(N);
-
-        while (N > 0) {
-            ans *= x;
-            N--;
-        }
-
-        return isPositive ? ans : 1/ans;
-
-        // TC : O(n)
-        // SC : O(1)
-    }
-
-    public static double myPow(double x, int n) {
+class demo {
+    public static double myPowForPositiveN(double x, int n) {
         if(n == 1){
             return x;
         }
+        if(n == 0){
+            return 1;
+        }
+        double half = myPowForPositiveN(x, n/2);
         if(n % 2 == 0){
-            return myPow(x, n/2)*myPow(x, n/2);
+            return half * half;
         }else{
-            return myPow(x, n/2)*myPow(x, n/2)*myPow(x, 1);
+            return half* half *x;
         }
     }
 
-    
-
-    public static void main(String[] args) {
-        double x = 2;
-        int n = 5;
-        System.out.println(myPow(x, n));
+    public static double myPow(double x, int n) {
+        if(n < 0){
+            return 1/myPowForPositiveN(x, -n);
+        }else{
+            return myPowForPositiveN(x, n);
+        }
     }
+    public static void main(String[] args) {
+        System.out.println(myPow(2, 10));
+    }
+    // TC = O(log₂ n) ~ O(logn)
+    // SC = O(log₂ n) ~ O(logn) recursion stack space
 }

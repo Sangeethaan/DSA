@@ -35,7 +35,7 @@ public class demo {
         st.push(top);
     }
     // TC = O(n^2)
-    // SC = O(1)
+    // SC = O(n) for recursive stack
     public static void main(String[] args) {
         Stack<Integer> st = new Stack<>();
         st.push(41);

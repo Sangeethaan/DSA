@@ -27,5 +27,8 @@ public class demo {
     public static void main(String[] args) {
         int n = 50;
         System.out.println(countGoodNumbers(n));
+
+        // TC = O(logn)+O(logn) ~ O(logn)
+        // SC = O(logn)
     }
 }

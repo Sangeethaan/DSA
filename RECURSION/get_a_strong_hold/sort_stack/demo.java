@@ -64,7 +64,7 @@ public class demo {
         while(!temp.isEmpty()){
             st.push(temp.pop());
         }
-        // TC = O(n^2)
+        // TC = O(n^2)+O(n) ~ O(n)
         // SC = O(n)
     }
 
