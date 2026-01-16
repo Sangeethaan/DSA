@@ -19,8 +19,7 @@ public class demo {
             createParenthesis(s+")", open, close+1, n, list);
         }
     }
-    // TC = O(n) + O(n · Catalan(n)) ~ O(n · Catalan(n))
-    // SC = O(n) + O(n · Catalan(n)) ~ O(n · Catalan(n))
+    
     public static void main(String[] args) {
         System.out.println(generateParenthesis(3));
     }
