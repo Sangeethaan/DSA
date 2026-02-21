@@ -1,0 +1,33 @@
+Basic Terms
+
+Root
+The topmost node of the tree. It has no parent.
+
+Child
+A node directly connected below another node (its parent).
+
+Leaf (Leaf Node)
+A node that has no children.
+
+Subtree
+A tree formed by any node and all of its descendants.
+
+Ancestors
+All nodes on the path from a node up to the root (excluding the node itself).
+
+Types of Binary Trees
+
+Full Binary Tree
+Every node has either 0 or 2 children (no node has only one child).
+
+Complete Binary Tree
+All levels are completely filled except possibly the last, and the last level is filled from left to right.
+
+Perfect Binary Tree
+All internal nodes have 2 children and all leaf nodes are at the same level.
+
+Balanced Binary Tree
+The height difference between the left and right subtree of every node is at most 1.
+
+Degenerate Binary Tree
+Each parent node has only one child, making the tree look like a linked list.

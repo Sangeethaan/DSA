@@ -1,0 +1,45 @@
+1️⃣ Using a Node class (Most common)
+Structure
+
+Each node stores:
+
+data
+
+left child reference
+
+right child reference
+
+Code
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    Node(int data) {
+        this.data = data;
+        left = null;
+        right = null;
+    }
+}
+
+Example Tree
+      1
+     / \
+    2   3
+
+Creating the tree
+Node root = new Node(1);
+root.left = new Node(2);
+root.right = new Node(3);
+
+
+✅ Best for most tree problems
+✅ Used in interviews & LeetCode
+
+
+Binary tree traversals:
+1. Breadth-first search
+2. Depth-first search
+    a. in-Order traversal (left root right)
+    b. pre-Order traversal (root left right)
+    c. post-Order traversal (left right root)
